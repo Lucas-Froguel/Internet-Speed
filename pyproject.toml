@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "internet_speed"
+version = "0.1.0"
+description = "Project created to monitor the internet speed and automatically generate reports and send them by email to the owner."
+authors = ["Lucas Froguel <belasquelucas@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "~3.9.1"
+django = "*"
+djangorestframework = "*"
+psycopg2 = "*"
+gunicorn = "*"
+markdown = "*"
+django-filter = "*"
+djangorestframework-simplejwt = "*"
+django-split-settings = "*"
+dj-database-url = "*"
+python-decouple = "*"
+sentry-sdk = "*"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+django-extensions = "*"
+flake8 = "*"
+isort = "*"
+mixer = "*"
+mypy = "*"
+pre-commit = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-django = "*"
+pytest-env = "*"
+pytest-mock = "*"
+
+[build-system]
+requires = ["poetry>=1.1.4"]
+build-backend = "poetry.masonry.api"
