@@ -9,21 +9,21 @@ services:
     ports:
       - "5432:5432"
 
-  web: 
-    build:
-      context: .
-      target: backend
-      args:
-        DJANGO_ENV: "${DJANGO_ENV}"
-    image: internet_speed
-    command: "$DOCKER_COMMAND"
-    env_file: 
-      - .env
-    ports:
-      - "8000:8000"
-    volumes:
-      - .:/app
-    stdin_open: true
-    tty: true
-    depends_on: 
-      - db
+#  web:
+#    build:
+#      context: .
+#      target: backend
+#      args:
+#        DJANGO_ENV: "${DJANGO_ENV}"
+#    image: internet_speed
+#    command: "$DOCKER_COMMAND"
+#    env_file:
+#      - .env
+#    ports:
+#      - "8000:8000"
+#    volumes:
+#      - .:/app
+#    stdin_open: true
+#    tty: true
+#    depends_on:
+#      - db

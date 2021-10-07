@@ -8,6 +8,7 @@ from rest_framework_simplejwt.views import (
 )
 
 from .views.profile import profile_me_view
+from.views.internet import get_internet_speed_view
 
 router = routers.DefaultRouter()
 
@@ -16,6 +17,7 @@ urlpatterns = [
     path("auth/refresh/", TokenRefreshView.as_view(), name="jwt-refresh"),
     path("auth/verify/", TokenVerifyView.as_view(), name="jwt-verify"),
     path("profile/me/", profile_me_view),
+    path("internet/speed/", get_internet_speed_view)
 ]
 
 urlpatterns += router.urls
