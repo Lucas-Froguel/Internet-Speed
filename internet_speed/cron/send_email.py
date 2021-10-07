@@ -6,6 +6,7 @@ import os
 
 path = "internet_speed/local_data"
 
+
 def send_email():
     print("Sending email...")
     ctx = generate_report()
@@ -18,5 +19,4 @@ def send_email():
         mail.attach_file(path+"/"+image)
     mail.attach_alternative(message_html, "text/html")
     mail.send()
-
 

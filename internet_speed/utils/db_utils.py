@@ -11,9 +11,7 @@ def add_speed_data_to_db(speed_data):
 
 
 def get_data_from_db(now, last_week):
-    print(f"Now: {now} \nLast Week: {last_week}")
     data = Internet.objects.filter(created_at__gte=last_week)
     data = data.filter(created_at__lte=now).values()
-    print(data)
 
     return data

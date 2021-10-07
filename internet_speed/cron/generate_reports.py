@@ -18,8 +18,9 @@ def generate_report():
 
     avr_download = np.average(data["download_speed"])
     avr_upload = np.average(data["upload_speed"])
+    avr_ping = np.average(data["ping"])
 
-    return {"avr_download": avr_download, "avr_upload": avr_upload, "las_week": last_week, "now": now}
+    return {"avr_download": avr_download, "avr_upload": avr_upload, "last_week": last_week, "now": now, "avr_ping": avr_ping}
 
 
 def create_speed_image(data, title="", name=""):
