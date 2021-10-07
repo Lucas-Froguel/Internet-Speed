@@ -17,6 +17,7 @@ django-split-settings = "*"
 dj-database-url = "*"
 python-decouple = "*"
 sentry-sdk = "*"
+speedtest-cli = "^2.1.3"
 
 [tool.poetry.dev-dependencies]
 black = "*"
