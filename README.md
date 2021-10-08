@@ -1,56 +1,31 @@
 # InternetSpeed
 Project created to monitor the internet speed and automatically generate reports and send them by email to the owner.
 
+Every 15 minutes a function will run that will test your 
+internet speed, both download and upload. This data will
+be saved in a database. Once per week, mondays at 8am,
+a simple report will be generated, stating your average
+speed and ping. A graph of the speed over the past week
+will also be generated. All this information will be 
+sent to your email. 
+
 ## Requirements
 - Docker
 - Docker-compose
 
 ## Initial setup
-```shell
-make init
-```
+After setting up docker in your computer, create a .env file with
+the same data as .env.template, but substitute your email
+and password at the respective location - gmail is the default,
+if you want another, some settings will have to be changed. Do not worry,
+your data will remain there and only will be used to authenticate
+your email. 
 
-## Run
+After that, just type 
 ```shell
-make run
+docker-compose build
 ```
-
-## Build
+and
 ```shell
-make build
+docker-compose up
 ```
-
-
-## Test
-```shell
-make test
-```
-
-## Create new migrations
-```shell
-make migrations
-```
-
-## Persist migrations
-```shell
-make migrate
-```
-
-## Load fixtures
-```shell
-make load-fixtures
-```
-
-## Custom commands
-Start your custom command if the following prefix: `docker-compose run --entrypoint="" web `.
-Example:
-```shell
-docker-compose run --entrypoint="" web python manage.py createsuperuser
-```
-
-## Extra commands
-There's a chance of something missing here, maybe is a good idea take a look into `Makefile` file.
-```shell
-cat Makefile
-```
-Feel free to add new commands in `Makefile` and/or here on `README.md`.
